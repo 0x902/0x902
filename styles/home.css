@@ -13,7 +13,7 @@
 .face-shot {
     filter: grayscale();
     background-size: cover;
-    border: 1.5px solid black;
+    border: 1.8px solid black;
     /* border-radius: 10px; */
     transition: all 0.3s ease-in-out;
 }
@@ -37,6 +37,21 @@
 
 .hero-cta {
     font-size: 18px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+    transform: translateY(-4px);
 }
 
 /* Technologies ---------------------------------------------------- */

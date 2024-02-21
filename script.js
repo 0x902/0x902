@@ -9,6 +9,8 @@ const scrollDownIndicator = document.querySelector(".scroll-down");
 
 console.log("Nothing intresting here sneaky lil bitch!");
 
+feather.replace({ class: "social-icon", "stroke-width": 1.15 });
+
 // loading screen
 setTimeout(() => {
     loaderEl.classList.add("hidden");
