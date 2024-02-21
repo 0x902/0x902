@@ -14,7 +14,7 @@
     filter: grayscale();
     background-size: cover;
     border: 1.5px solid black;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     transition: all 0.3s ease-in-out;
 }
 
@@ -207,17 +207,15 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .hero {
-        align-items: center;
+        margin-top: -35px;
+    }
+    .face-shot {
+        width: 100%;
     }
 
     .h1-hero {
         position: relative;
         font-size: 32px;
-        text-align: center;
-    }
-
-    .hero-description {
-        text-align: center;
     }
 
     .projects ul {
