@@ -12,7 +12,7 @@ A hacker, a dreamer, that's me.
 With plans as my compass and design as my muse,
 I journey forth, creating, I refuse to lose.
 
----
+<!-- ---
 
 ### 🥸 Languages
 
@@ -36,7 +36,7 @@ I journey forth, creating, I refuse to lose.
         <img width="32px" title="javascript" style="margin-right: 20px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
     </a>
 
-</p>
+</p> -->
 
 ---
 
