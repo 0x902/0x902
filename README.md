@@ -40,6 +40,12 @@ I journey forth, creating, I refuse to lose.
 
 ---
 
+### Github Stats
+
+[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=0x902)](https://github.com/anuraghazra/github-readme-stats)
+
+---
+
 ## Hello World!! 🤔
 
 -   💬 Ask me about anything an everything.
