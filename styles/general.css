@@ -198,6 +198,7 @@ a.selected {
 
 /* Go to top btn */
 .go-to-top {
+    background-color: rgb(250, 250, 248);
     margin: 0 auto;
     margin-bottom: 30px;
     display: flex;
@@ -213,7 +214,7 @@ a.selected {
 
 .go-to-top.right-align {
     position: fixed;
-    right: 50px;
+    right: 30px;
     bottom: 0;
 }
 
