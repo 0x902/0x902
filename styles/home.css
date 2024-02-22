@@ -139,6 +139,10 @@
     color: white;
 }
 
+.project-description {
+    flex: 1;
+}
+
 .project-link {
     text-decoration: underline;
     color: blue;
