@@ -108,7 +108,7 @@
     gap: 10px;
     background-color: #ecececb3;
     padding: 16px;
-    border-radius: 16px;
+    border-radius: 10px;
 }
 
 .title-container {
@@ -119,6 +119,24 @@
 
 .project-title {
     font-size: 24px;
+}
+
+.project-type {
+    padding: 5px 8px;
+    font-size: 14px;
+    width: max-content;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.5) 0px -6px 14px;
+}
+
+.project-type.client {
+    background-color: #6f6f6f;
+    color: white;
+}
+
+.project-type.personal {
+    background-color: #c0c0c0;
+    color: white;
 }
 
 .project-link {
@@ -224,13 +242,13 @@
     .hero {
         margin-top: -35px;
     }
-    .face-shot {
+    /* .face-shot {
         width: 100%;
-    }
+    } */
 
     .h1-hero {
         position: relative;
-        font-size: 32px;
+        font-size: 36px;
     }
 
     .projects ul {

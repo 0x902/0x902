@@ -1,6 +1,6 @@
 # 👽 0x902
 
-**`Digital Craftsman (Designer / Developer / Hacker / Enthusiast)`**
+**`Digital Craftsman`**
 
 In the realm of ones and zeros, I dance,
 An indie coder with a daring stance.

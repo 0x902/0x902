@@ -76,6 +76,11 @@ a:active {
     text-decoration: none;
 }
 
+.disabled {
+    color: grey !important;
+    text-decoration: line-through !important;
+}
+
 /* Link button */
 .btn-link {
     font-weight: 600;
