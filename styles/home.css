@@ -256,6 +256,8 @@
 .article {
     padding: 20px;
     font-weight: 400;
+    background-color: #252525;
+    color: white;
 }
 
 /* Extra small devices (phones, 600px and down) */

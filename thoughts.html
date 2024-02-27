@@ -29,7 +29,7 @@
             Why are you inspecting the page?? 🤨
     -->
 
-    <body>
+    <body class="blog">
         <header class="block">
             <nav>
                 <ul>
@@ -103,21 +103,5 @@
             ui.yazir@gmail.com
         </div>
         <script src="script.js"></script>
-        <script>
-            // add blogs from blogs folder
-            const blogTitles = ["Silent Love, Unspoken"];
-            for (let i = 1; i <= blogTitles.length; i++) {
-                document.querySelector(".thoughts-list").innerHTML += `
-                <li>
-                <h3 class="thought-title">
-                    ${blogTitles[i - 1]}
-                </h3>
-                <a href="/blogs/${i}.html" class="btn-link thought-btn"
-                    >Read &rightarrow;</a
-                >
-            </li>
-                `;
-            }
-        </script>
     </body>
 </html>
