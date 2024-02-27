@@ -105,9 +105,8 @@
         <script src="script.js"></script>
         <script>
             // add blogs from blogs folder
-            const blogCount = 2;
             const blogTitles = ["Silent Love, Unspoken"];
-            for (let i = 1; i <= blogCount; i++) {
+            for (let i = 1; i <= blogTitles.length(); i++) {
                 document.querySelector(".thoughts-list").innerHTML += `
                 <li>
                 <h3 class="thought-title">
