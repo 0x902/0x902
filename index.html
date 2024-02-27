@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>QRapid &mdash; QR Generator</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <main>
+            <div class="content">
+                <h1>Convert your<br />link to QR code.</h1>
+                <form>
+                    <input
+                        class="input-url"
+                        type="text"
+                        placeholder="Your URL"
+                        required
+                        autocomplete="on"
+                        spellcheck="false"
+                    />
+                    <button type="submit">Generate</button>
+                </form>
+                <p>
+                    Your QR code will be generated automatically, your generated
+                    QR code will open this URL.
+                </p>
+            </div>
+            <div class="result">
+                <p>> scan the qr to verify the url</p>
+                <div class="qrcode"></div>
+                <div class="result-actions">
+                    <button class="btn-download btn-secondary">Download</button>
+                    <div class="select-container">
+                        <label for="select-format">File Format:</label>
+                        <select name="file-format" id="select-format">
+                            <option value="png">PNG</option>
+                            <option value="png">JPG</option>
+                            <option value="png">SVG</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="qrcode.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
