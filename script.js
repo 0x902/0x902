@@ -42,10 +42,37 @@ function loadThoughts() {
     }
 }
 
-// load thoughts only on homepage and thoughts page
-if (
-    document.body.classList[0] == "home" ||
-    document.body.classList[0] == "blog"
-) {
+// home page
+if (document.body.classList[0] == "page-home") {
+    // loading screen
+    const loaderEl = document.querySelector(".loader");
+    setTimeout(() => {
+        loaderEl.classList.add("hidden");
+        document.body.style.overflowY = "scroll";
+    }, Math.ceil(Math.random() * 3) * 1000);
+
+    // hide scroll down indicator
+    const scrollDownIndicator = document.querySelector(".scroll-down");
+    window.addEventListener("scroll", function (e) {
+        e.preventDefault();
+        scrollDownIndicator.style.transform = "translateY(200px)";
+        scrollDownIndicator.style.opacity = "0";
+    });
+
     loadThoughts();
+}
+
+// thoughts page
+if (document.body.classList[0] == "page-thoughts") {
+    loadThoughts();
+}
+
+// gallery page
+if (document.body.classList[0] == "page-gallery") {
+    const imageCount = 8;
+    for (let i = 1; i <= imageCount; i++) {
+        document.querySelector(
+            ".gallery-container"
+        ).innerHTML += `<img src="./gallery/${i}.jpg"/>`;
+    }
 }

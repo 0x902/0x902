@@ -12,6 +12,12 @@
             rel="stylesheet"
         />
 
+        <link
+            rel="shortcut icon"
+            href="assets/favicon.png"
+            type="image/x-icon"
+        />
+
         <link rel="stylesheet" href="styles/general.css" />
         <link rel="stylesheet" href="styles/home.css" />
 
@@ -27,10 +33,14 @@
             Why are you inspecting the page?? 🤨
             Why are you inspecting the page?? 🤨
     -->
-    <body class="home">
+    <body class="page-home">
         <div class="loader">
-            <img src="assets/coffee.gif" width="100px" alt="loading gif" />
-            <p>Excuse the dust, this website is under construction</p>
+            <img src="assets/logo.png" width="150px" alt="loading gif" />
+            <p>
+                Do not go where the path may lead,<br />
+                go instead where there is no path and leave a trail<br />
+                <i>&mdash; Ralph Waldo Emerson</i>
+            </p>
         </div>
         <div class="scroll-down">scroll down &DownArrow;</div>
         <div class="content">
@@ -40,7 +50,7 @@
                         <li class="mobile-logo">
                             <a href="/"
                                 ><img
-                                    src="assets/coffee.gif"
+                                    src="assets/logo.png"
                                     height="45px"
                                     alt="site-logo"
                             /></a>
@@ -87,11 +97,11 @@
             <main>
                 <div id="home" class="hero block">
                     <img
-                        src="assets/pfp.jpg"
+                        src="assets/logo.png"
                         width="170px"
                         alt="face shot"
                         class="face-shot"
-                        title="I'm too shy to share my face on the internet. So here's a picture of my favourite moth ❤️"
+                        title="I'm too shy to share my face on the internet. So here's my favorite moth image ❤️"
                     />
                     <h1 class="h1-hero">
                         I’m 0x902.<br />I design, develop and hack.
@@ -140,8 +150,7 @@
                             title="University Of Colombo School Of Computing"
                             ><u>UCSC</u></a
                         >. I have a strong passion for coding, design, and of
-                        course, pondering while savoring a good cup of coffee
-                        ☕.
+                        course, pondering while savoring a good cup of ☕.
                     </p>
                     <a
                         href="mailto:ui.yazir@gmail.com"
@@ -260,21 +269,5 @@
             </main>
         </div>
         <script src="script.js"></script>
-        <script>
-            // loading screen
-            const loaderEl = document.querySelector(".loader");
-            setTimeout(() => {
-                loaderEl.classList.add("hidden");
-                document.body.style.overflowY = "scroll";
-            }, Math.ceil(Math.random() * 3) * 1000);
-
-            // hide scroll down indicator
-            const scrollDownIndicator = document.querySelector(".scroll-down");
-            window.addEventListener("scroll", function (e) {
-                e.preventDefault();
-                scrollDownIndicator.style.transform = "translateY(200px)";
-                scrollDownIndicator.style.opacity = "0";
-            });
-        </script>
     </body>
 </html>

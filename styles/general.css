@@ -59,7 +59,7 @@ h3 {
 p {
     color: #333333;
     line-height: 1.5;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 /* Link Styles */
@@ -100,9 +100,9 @@ header nav ul {
     display: flex;
     gap: 30px;
     list-style-type: none;
-    justify-content: end;
+    justify-content: space-between;
     align-items: center;
-    padding: 14px 0;
+    padding: 20px 0;
     font-weight: 400;
 }
 
@@ -189,6 +189,7 @@ a.selected {
 .loader p {
     max-width: 80%;
     text-align: center;
+    line-height: 1.6;
 }
 
 /* hider */

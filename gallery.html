@@ -12,6 +12,12 @@
             rel="stylesheet"
         />
 
+        <link
+            rel="shortcut icon"
+            href="assets/favicon.png"
+            type="image/x-icon"
+        />
+
         <link rel="stylesheet" href="styles/general.css" />
         <link rel="stylesheet" href="styles/home.css" />
 
@@ -27,7 +33,7 @@
             Why are you inspecting the page?? 🤨
             Why are you inspecting the page?? 🤨
     -->
-    <body>
+    <body class="page-gallery">
         <div class="content">
             <header class="block">
                 <nav>
@@ -106,14 +112,5 @@
             <img src="assets/up.png" height="100%" alt="up arrow " />
         </a>
         <script src="script.js"></script>
-        <script defer>
-            // add images from gallery folder
-            const imageCount = 8;
-            for (let i = 1; i <= imageCount; i++) {
-                document.querySelector(
-                    ".gallery-container"
-                ).innerHTML += `<img src="./gallery/${i}.jpg"/>`;
-            }
-        </script>
     </body>
 </html>
