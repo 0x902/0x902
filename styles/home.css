@@ -233,21 +233,6 @@
     background-color: #252525;
 }
 
-/* Canvas */
-.canvas,
-.canvas2 {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: -10;
-}
-
-.canvas2 {
-    z-index: -20;
-}
-
 .scroll-down {
     position: fixed;
     bottom: 0;
@@ -261,6 +246,16 @@
     font-weight: 500;
     display: none;
     transition: all 1s ease-in-out;
+}
+
+/* ---------------------------- Blog */
+.blog-date {
+    margin-bottom: 30px;
+}
+
+.article {
+    padding: 20px;
+    font-weight: 400;
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -302,10 +297,6 @@
     }
 
     .h1-hero img {
-        display: none;
-    }
-
-    .canvas {
         display: none;
     }
 

@@ -92,32 +92,7 @@
                 tips, tech trends, or random ponderings, there's always
                 something brewing in here.
             </p>
-            <ul>
-                <li>
-                    <h3 class="thought-title">
-                        The Importance of UX in Website Design
-                    </h3>
-                    <a href="#" class="btn-link thought-btn"
-                        >Read &rightarrow;</a
-                    >
-                </li>
-                <li>
-                    <h3 class="thought-title">
-                        5 Essential Web Design Tools You Need
-                    </h3>
-                    <a href="#" class="btn-link thought-btn"
-                        >Read &rightarrow;</a
-                    >
-                </li>
-                <li>
-                    <h3 class="thought-title">
-                        Responsive Web Design: Why It Matters
-                    </h3>
-                    <a href="#" class="btn-link thought-btn"
-                        >Read &rightarrow;</a
-                    >
-                </li>
-            </ul>
+            <ul class="thoughts-list"></ul>
         </div>
 
         <a href="#" class="go-to-top hidden">
@@ -128,5 +103,22 @@
             ui.yazir@gmail.com
         </div>
         <script src="script.js"></script>
+        <script>
+            // add blogs from blogs folder
+            const blogCount = 2;
+            const blogTitles = ["Silent Love, Unspoken"];
+            for (let i = 1; i <= blogCount; i++) {
+                document.querySelector(".thoughts-list").innerHTML += `
+                <li>
+                <h3 class="thought-title">
+                    ${blogTitles[i - 1]}
+                </h3>
+                <a href="/blogs/${i}.html" class="btn-link thought-btn"
+                    >Read &rightarrow;</a
+                >
+            </li>
+                `;
+            }
+        </script>
     </body>
 </html>

@@ -1,12 +1,8 @@
 // DOM elements
-const loaderEl = document.querySelector(".loader");
 const mobileMenuEl = document.querySelector(".mobile-menu");
 const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
 const collapseMenuBtn = document.querySelector(".collapse-menu-btn");
 const floatingEmailBtn = document.querySelector(".floating-email");
-const themeSwitchBtn = document.querySelector(".theme-switch");
-const scrollDownIndicator = document.querySelector(".scroll-down");
-const galleryContainerEl = document.querySelector(".gallery-container");
 
 console.log("Why you looking at the console?? 🤨");
 
@@ -29,25 +25,3 @@ collapseMenuBtn.addEventListener("click", function () {
 floatingEmailBtn.addEventListener("click", function () {
     window.open("mailto:ui.yazir@gmail.com");
 });
-
-// onScroll
-if (document.body.classList !== false && document.body.classList[0] == "home") {
-    // hide scroll down indicator
-    window.addEventListener("scroll", function (e) {
-        e.preventDefault();
-        scrollDownIndicator.style.transform = "translateY(200px)";
-        scrollDownIndicator.style.opacity = "0";
-    });
-
-    // loading screen
-    setTimeout(() => {
-        loaderEl.classList.add("hidden");
-        document.body.style.overflowY = "scroll";
-    }, Math.ceil(Math.random() * 3) * 1000);
-}
-
-// add images from gallery folder
-const fileCount = 8;
-for (let i = 1; i <= fileCount; i++) {
-    galleryContainerEl.innerHTML += `<img src="./gallery/${i}.jpg"/>`;
-}

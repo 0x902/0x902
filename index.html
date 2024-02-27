@@ -285,5 +285,21 @@
             </main>
         </div>
         <script src="script.js"></script>
+        <script>
+            // loading screen
+            const loaderEl = document.querySelector(".loader");
+            setTimeout(() => {
+                loaderEl.classList.add("hidden");
+                document.body.style.overflowY = "scroll";
+            }, Math.ceil(Math.random() * 3) * 1000);
+
+            // hide scroll down indicator
+            const scrollDownIndicator = document.querySelector(".scroll-down");
+            window.addEventListener("scroll", function (e) {
+                e.preventDefault();
+                scrollDownIndicator.style.transform = "translateY(200px)";
+                scrollDownIndicator.style.opacity = "0";
+            });
+        </script>
     </body>
 </html>

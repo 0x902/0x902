@@ -106,5 +106,14 @@
             <img src="assets/up.png" height="100%" alt="up arrow " />
         </a>
         <script src="script.js"></script>
+        <script defer>
+            // add images from gallery folder
+            const imageCount = 8;
+            for (let i = 1; i <= imageCount; i++) {
+                document.querySelector(
+                    ".gallery-container"
+                ).innerHTML += `<img src="./gallery/${i}.jpg"/>`;
+            }
+        </script>
     </body>
 </html>
