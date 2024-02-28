@@ -20,11 +20,21 @@ body {
     max-width: 1000px;
     margin: 0 auto;
     width: 100%;
+    margin-bottom: 50px;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    padding: 10px;
 }
 
 main {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.5fr 1fr;
     align-items: center;
     gap: 100px;
     height: 100%;
@@ -33,7 +43,7 @@ main {
 .content {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
     justify-content: center;
 }
 
@@ -49,7 +59,7 @@ select {
     font-family: inherit;
     outline: none;
     border: none;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     border-radius: 5px;
     border: 2px solid black;
 }
@@ -90,9 +100,9 @@ label {
 .result {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
     transition: all 1s ease;
-    padding: 30px;
+    padding: 20px;
     border-radius: 20px;
     background-color: whitesmoke;
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
@@ -100,11 +110,17 @@ label {
 }
 
 .qrcode {
-    max-width: 100%;
-    width: 500px;
-    height: 500px;
-    max-height: 100%;
-    background: url("https://www.placeholder.com/500x500");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.qrcode img {
+    flex: 1;
+    padding: 30px;
+    background-color: white;
     border-radius: 10px;
 }
 
@@ -138,12 +154,19 @@ select {
 }
 
 .url {
+    width: 320px;
+    margin: 0 auto;
     background-color: rgb(233, 233, 233);
     padding: 10px 20px;
     font-size: 1.8rem;
     font-weight: 400;
-    text-align: center;
     border-radius: 10px;
+    text-align: center;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 320px;
 }
 
 .alert {
@@ -158,10 +181,6 @@ select {
 }
 
 footer {
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
     text-align: center;
     padding: 15px;
     font-size: 1.6rem;
@@ -177,4 +196,22 @@ footer a {
 
 a {
     color: black;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 800px) {
+    main {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .block {
+        padding: 20px;
+        margin-bottom: 30px;
+        max-width: 100%;
+    }
+
+    .alert {
+        margin-top: -15px;
+    }
 }

@@ -27,8 +27,8 @@ formEl.addEventListener("submit", (e) => {
         if (isFirst) {
             qrcode = new QRCode(document.querySelector(".qrcode"), {
                 text: userInput,
-                width: 500,
-                height: 500,
+                width: 300,
+                height: 300,
                 colorDark: "#000000",
                 colorLight: "#ffffff",
                 correctLevel: QRCode.CorrectLevel.H,
@@ -52,7 +52,7 @@ downloadButton.addEventListener("click", () => {
 
     // Create a temporary anchor element
     const link = document.createElement("a");
-    link.download = `Qrapid-${siteUrl.toLowerCase().replaceAll(" ", "")}.png`; // Set the filename for the download
+    link.download = `QRapid-${siteUrl.toLowerCase().replaceAll(" ", "")}.png`; // Set the filename for the download
     link.href = qrImageSrc;
 
     // Simulate click on the anchor element to trigger download
