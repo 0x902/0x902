@@ -44,21 +44,26 @@ formEl.addEventListener("submit", (e) => {
     }
 });
 
-// Assuming you have a download button with id "downloadButton"
 const downloadButton = document.querySelector(".btn-download");
-downloadButton.addEventListener("click", () => {
-    // Convert the QR code to an image
+downloadButton.addEventListener("click", async () => {
     const qrImageSrc = document.querySelector(".qrcode img").src;
+
+    // Fetch the image
+    const response = await fetch(qrImageSrc);
+    const blob = await response.blob();
 
     // Create a temporary anchor element
     const link = document.createElement("a");
-    link.download = `QRapid-${siteUrl.toLowerCase().replaceAll(" ", "")}.png`; // Set the filename for the download
-    link.href = qrImageSrc;
+    link.href = URL.createObjectURL(blob);
+    link.download = `QRapid-${siteUrl.toLowerCase().replaceAll(" ", "")}.png`;
 
     // Simulate click on the anchor element to trigger download
     document.body.appendChild(link);
     link.click();
+
+    // Clean up
     document.body.removeChild(link);
+    URL.revokeObjectURL(link.href);
 });
 
 const isValidUrl = (urlString) => {
