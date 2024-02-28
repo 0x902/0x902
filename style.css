@@ -14,6 +14,7 @@ body {
     font-family: "IBM Plex Mono", monospace;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 .block {
@@ -223,7 +224,8 @@ a {
 
     .block {
         padding: 15px;
-        margin-bottom: 30px;
+        margin-bottom: 80px;
+        max-width: 100vw;
     }
 
     .result {
