@@ -121,7 +121,7 @@ label {
 .qrcode img {
     flex: 1;
     padding: 30px;
-    background-color: greenyellow;
+    background-color: white;
     border-radius: 10px;
 }
 
@@ -190,7 +190,7 @@ footer {
 }
 
 footer a {
-    color: greenyellow;
+    color: #adff2f;
     text-decoration: none;
     font-weight: 500;
 }
@@ -207,12 +207,12 @@ a {
 
     input,
     button {
-        padding: 15px;
+        padding: 18px;
     }
 
     header {
         border-bottom: 2px solid black;
-        padding: 0 15px;
+        padding: 0 18px;
     }
 
     h1 {
@@ -222,7 +222,7 @@ a {
     main {
         grid-template-columns: 1fr;
         gap: 30px;
-        padding: 15px;
+        padding: 18px;
     }
 
     .block {
@@ -232,7 +232,7 @@ a {
 
     .result {
         gap: 20px;
-        padding: 10px;
+        padding: 15px;
     }
 
     .qrcode {
