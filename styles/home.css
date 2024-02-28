@@ -261,9 +261,9 @@
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    /* .face-shot {
-        width: 100%;
-    } */
+    .face-shot {
+        display: none;
+    }
 
     .h1-hero {
         position: relative;
