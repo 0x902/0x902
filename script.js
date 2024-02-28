@@ -27,8 +27,8 @@ formEl.addEventListener("submit", (e) => {
         if (isFirst) {
             qrcode = new QRCode(document.querySelector(".qrcode"), {
                 text: userInput,
-                width: 300,
-                height: 300,
+                width: 280,
+                height: 280,
                 colorDark: "#000000",
                 colorLight: "#ffffff",
                 correctLevel: QRCode.CorrectLevel.H,
