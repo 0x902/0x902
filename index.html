@@ -15,30 +15,36 @@
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <main>
+        <header class="block">
+            <img height="100px" src="logo.png" alt="site-logo" />
+        </header>
+        <main class="block">
             <div class="content">
                 <h1>Convert your<br />link to QR code.</h1>
                 <form>
                     <input
                         class="input-url"
                         type="text"
-                        placeholder="Your URL"
+                        placeholder="https://"
                         required
                         autocomplete="on"
                         spellcheck="false"
                     />
-                    <button type="submit">Generate</button>
+                    <button class="btn-generate" type="submit">Generate</button>
                 </form>
+                <label class="alert hidden">:: invalid url</label>
                 <p>
                     Your QR code will be generated automatically, your generated
                     QR code will open this URL.
                 </p>
             </div>
-            <div class="result">
-                <p>> scan the qr to verify the url</p>
+            <div class="result hidden">
+                <p class="url"><a href="#">https://</a></p>
                 <div class="qrcode"></div>
                 <div class="result-actions">
-                    <button class="btn-download btn-secondary">Download</button>
+                    <button class="btn-download btn-secondary">
+                        Download QR
+                    </button>
                     <div class="select-container">
                         <label for="select-format">File Format:</label>
                         <select name="file-format" id="select-format">
@@ -50,6 +56,10 @@
                 </div>
             </div>
         </main>
+        <footer>
+            Made with ❤️ by
+            <a target="_blank" href="https://0x902.netlify.app">0x902</a>
+        </footer>
         <script src="qrcode.js"></script>
         <script src="script.js"></script>
     </body>
