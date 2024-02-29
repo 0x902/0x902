@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>QRapid &mdash; App</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="general.css" />
+        <link rel="stylesheet" href="app.css" />
+    </head>
+    <body>
+        <header class="block">
+            <a class="header-logo" href="/">
+                <img height="50px" src="assets/logo.png" alt="site-logo" />
+            </a>
+        </header>
+        <main class="block">
+            <div class="options">
+                <div class="url-input-container">
+                    <h2>1. URL</h2>
+                    <form>
+                        <input
+                            class="input-url"
+                            type="text"
+                            placeholder="https://"
+                            required
+                            autocomplete="on"
+                            spellcheck="false"
+                        />
+                        <button class="btn-generate" type="submit">
+                            Generate
+                        </button>
+                    </form>
+                </div>
+                <div class="color-input-container">
+                    <h2>2. Colors</h2>
+                    <div>
+                        <div class="input-container">
+                            <label for="foreground-color">Foreground</label>
+                            <input
+                                type="color"
+                                name="foreground-color"
+                                id="style2"
+                            />
+                        </div>
+                        <div class="input-container">
+                            <label for="foreground-color">Background</label>
+                            <input
+                                type="color"
+                                name="foreground-color"
+                                id="style2"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div class="logo-input-container">
+                    <h2>3. Logo</h2>
+                    <input type="file" name="logo-input" id="logo-input" />
+                </div>
+            </div>
+            <div class="result">
+                <div class="qrcode-container">
+                    <!-- <img src="assets/qr-placeholder.png" alt="" /> -->
+                </div>
+                <div class="result-actions">
+                    <button class="btn-download btn-secondary">
+                        Download QR
+                    </button>
+                    <div class="select-container">
+                        <select name="file-format" class="select-format">
+                            <option value="png">PNG</option>
+                            <option disabled value="jpg">JPG</option>
+                            <option disabled value="svg">SVG</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="app.js"></script>
+    </body>
+</html>
