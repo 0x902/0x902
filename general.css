@@ -1,0 +1,105 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+    font-size: 1.7rem;
+    overflow-x: hidden;
+    letter-spacing: 1.1px;
+    line-height: 1.5;
+}
+
+header {
+    padding: 15px;
+}
+
+h1 {
+    font-size: 3.6rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+input,
+button,
+select {
+    padding: 15px 20px;
+    font-family: inherit;
+    outline: none;
+    font-size: 1.6rem;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+input {
+    background-color: whitesmoke;
+    letter-spacing: inherit;
+}
+
+button {
+    background-color: #adff2f;
+    color: black;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+label {
+    display: inline-block;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.section-title {
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+
+.block {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+.hidden-none {
+    display: none !important;
+}
+
+.hidden-opacity {
+    opacity: 0 !important;
+}
+
+b {
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 800px) {
+    header {
+        position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: white;
+        border-bottom: 2px solid black;
+    }
+
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    .block {
+        margin-bottom: 70px;
+        max-width: 100vw;
+        padding: 15px;
+    }
+}

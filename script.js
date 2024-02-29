@@ -1,7 +1,7 @@
 const formEl = document.querySelector("form");
 const urlInputEl = document.querySelector(".input-url");
 const resultEl = document.querySelector(".result");
-const qrEl = document.querySelector(".qrcode");
+const qrEl = document.querySelector(".qrcode-container");
 const alertEl = document.querySelector(".alert");
 const urlEl = document.querySelector(".url");
 
@@ -11,9 +11,9 @@ let siteUrl = "";
 
 urlInputEl.addEventListener("input", () => {
     if (isValidUrl(urlInputEl.value)) {
-        alertEl.classList.add("hidden");
+        alertEl.classList.add("hidden-none");
     } else {
-        alertEl.classList.remove("hidden");
+        alertEl.classList.remove("hidden-none");
     }
 });
 
@@ -21,11 +21,11 @@ formEl.addEventListener("submit", (e) => {
     e.preventDefault();
     userInput = urlInputEl.value;
     if (isValidUrl(userInput)) {
-        resultEl.classList.remove("hidden");
-        urlEl.innerHTML = `<a target="_blank" href="https://${userInput}">${userInput} &rarr;</a>`;
+        resultEl.classList.remove("hidden-none");
+        urlEl.innerHTML = `<a class="url" target="_blank" href="https://${userInput}">${userInput} &rarr;</a>`;
         siteUrl = userInput;
         if (isFirst) {
-            qrcode = new QRCode(document.querySelector(".qrcode"), {
+            qrcode = new QRCode(qrEl, {
                 text: userInput,
                 width: 280,
                 height: 280,
@@ -46,7 +46,7 @@ formEl.addEventListener("submit", (e) => {
 
 const downloadButton = document.querySelector(".btn-download");
 downloadButton.addEventListener("click", async () => {
-    const qrImageSrc = document.querySelector(".qrcode img").src;
+    const qrImageSrc = document.querySelector(".qrcode-container img").src;
 
     // Fetch the image
     const response = await fetch(qrImageSrc);

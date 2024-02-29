@@ -8,10 +8,11 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
             rel="stylesheet"
         />
 
+        <link rel="stylesheet" href="general.css" />
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
@@ -39,33 +40,37 @@
                     />
                     <button class="btn-generate" type="submit">Generate</button>
                 </form>
-                <label class="alert hidden">:: invalid url</label>
-                <p>
+                <label class="alert hidden-none">:: invalid url</label>
+                <p class="hero-description">
                     Your QR code will be generated automatically, your generated
                     QR code will open this URL.
                 </p>
             </div>
-            <div class="result hidden">
-                <p class="url"><a href="#">https://</a></p>
-                <div class="qrcode"></div>
+            <div class="result hidden-none">
+                <div class="url-container">
+                    <a class="url" href="#">https://</a>
+                </div>
+                <div class="qrcode-container"></div>
                 <div class="result-actions">
                     <button class="btn-download btn-secondary">
                         Download QR
                     </button>
-                    <!-- <div class="select-container">
-                        <label for="select-format">File Format:</label>
-                        <select name="file-format" id="select-format">
+                    <div class="select-container">
+                        <!-- <label for="select-format">File Format:</label> -->
+                        <select name="file-format" class="select-format">
                             <option value="png">PNG</option>
-                            <option value="png">JPG</option>
-                            <option value="png">SVG</option>
+                            <option disabled value="jpg">JPG</option>
+                            <option disabled value="svg">SVG</option>
                         </select>
-                    </div> -->
+                    </div>
                 </div>
             </div>
         </main>
 
         <section class="intro block">
-            <h2>Get started on your QR code in seconds.</h2>
+            <h2 class="section-title">
+                Get started on your QR code in seconds.
+            </h2>
             <p>
                 Make your custom QR code in a few taps. All you need is your
                 mobile device or computer and browser; you don't have to
@@ -76,7 +81,7 @@
 
         <div class="steps-container block">
             <section class="steps">
-                <h2>How to Use?</h2>
+                <h2 class="section-title">How to Use?</h2>
                 <ul>
                     <li>
                         <h3 class="title">
@@ -84,7 +89,7 @@
                         </h3>
                         <p>
                             Enter the URL you'd like to generate a QR code for,
-                            then click <b>"Generate"</b>. which typically takes
+                            then click <b>"Generate"</b>. This typically takes
                             just a second or two to generate the QR code.
                         </p>
                     </li>
@@ -113,15 +118,14 @@
             </section>
         </div>
 
-        <section class="customize block">
-            <h2>Customize free QR codes as you like.</h2>
+        <section class="block">
+            <h2 class="section-title">Customize free QR codes as you like.</h2>
             <p>
                 Enchanced features are on it's way! We're excited to announce
                 that soon, you'll be able to personalize your usage even more
                 with customizable colors, add creativity to your QR codes with
                 image art, and enjoy expanded download options with different
-                formats. Stay tuned as we continue to innovate and improve your
-                experience.
+                formats.
             </p>
         </section>
         <footer>
