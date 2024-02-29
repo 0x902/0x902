@@ -207,12 +207,12 @@ a {
     }
 
     .steps-container {
-        padding: 15px;
+        padding: 30px;
     }
 
     .steps ul {
         grid-template-columns: 1fr;
-        gap: 15px;
+        gap: 20px;
         list-style-type: none;
     }
 }
