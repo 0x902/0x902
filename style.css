@@ -222,6 +222,7 @@ a {
 
     .qrcode-container img {
         padding: 20px;
+        max-width: 100%;
     }
 
     .steps-container {
