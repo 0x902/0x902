@@ -18,15 +18,16 @@
     <body>
         <header class="block">
             <a class="header-logo" href="/">
-                <img height="50px" src="assets/logo.png" alt="site-logo" />
+                <img height="50" src="assets/logo.png" alt="site-logo" />
             </a>
+            <a class="btn btn-cta" href="app.html">Go to app</a>
         </header>
         <main class="block">
             <div class="content">
                 <h1>Convert your<br />link to QR code.</h1>
                 <form>
                     <input
-                        class="input-url"
+                        class="url-input"
                         type="text"
                         placeholder="https://"
                         required
@@ -35,7 +36,9 @@
                     />
                     <button class="btn-generate" type="submit">Generate</button>
                 </form>
-                <label class="alert hidden-none">:: invalid url</label>
+                <label class="alert alert-invalid hidden-none"
+                    >:: invalid url</label
+                >
                 <p class="hero-description">
                     Your QR code will be generated automatically, your generated
                     QR code will open this URL.
@@ -62,7 +65,7 @@
             </div>
         </main>
 
-        <section class="intro block">
+        <section class="block">
             <h2 class="section-title">
                 Get started on your QR code in seconds.
             </h2>
@@ -116,18 +119,20 @@
         <section class="block">
             <h2 class="section-title">Customize free QR codes as you like.</h2>
             <p>
-                Enchanced features are on it's way! We're excited to announce
-                that soon, you'll be able to personalize your usage even more
-                with customizable colors, add creativity to your QR codes with
-                image art, and enjoy expanded download options with different
-                formats.
+                You can now personalize your QR code experience to your heart's
+                content. With customizable colors, you can choose the perfect
+                palette to match your style. Add a touch of creativity by
+                incorporating custom images into your QR codes.
             </p>
+            <a class="btn btn-cta" href="app.html">Create custom QR</a>
         </section>
         <footer>
             Made with ❤️ by
             <a target="_blank" href="https://0x902.netlify.app">0x902</a>
         </footer>
-        <script src="qrcode.js"></script>
-        <script src="script.js"></script>
+
+        <script defer src="qrcode.js"></script>
+        <script defer src="functions.js"></script>
+        <script defer src="index.js"></script>
     </body>
 </html>

@@ -4,6 +4,14 @@ body {
     max-width: 100%;
 }
 
+.header-logo {
+    flex: 1;
+}
+
+header .btn-cta:hover {
+    transform: unset;
+}
+
 main {
     display: grid;
     grid-template-columns: 1.5fr minmax(0, 1fr);
@@ -32,6 +40,18 @@ form input {
 
 input {
     flex: 1;
+}
+
+.btn-cta {
+    width: max-content;
+    padding: 10px 20px;
+    background-color: transparent;
+    transition: transform 0.3s ease-in-out;
+}
+
+.btn-cta:hover {
+    /* background-color: rgba(172, 255, 47, 0.5); */
+    transform: translateX(15px);
 }
 
 .btn-generate {
@@ -110,13 +130,6 @@ input {
     text-overflow: ellipsis;
 }
 
-.alert {
-    margin-top: -15px;
-    font-size: 1.4rem;
-    font-weight: 500;
-    color: rgb(192, 0, 38);
-}
-
 .steps-container {
     background-color: rgb(231, 231, 231);
     display: flex;
@@ -125,10 +138,6 @@ input {
     max-width: unset;
     width: 100%;
     padding: 50px;
-}
-
-.steps {
-    max-width: 1000px;
 }
 
 .steps h2 {
@@ -165,27 +174,9 @@ input {
     width: 45px;
     height: 45px;
     padding: 8px;
-    background-color: greenyellow;
+    background-color: #adff2f;
     border-radius: 100px;
     border: 2px solid black;
-}
-
-footer {
-    text-align: center;
-    padding: 15px;
-    font-size: 1.6rem;
-    background-color: black;
-    color: white;
-}
-
-footer a {
-    color: #adff2f;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-a {
-    color: black;
 }
 
 /* Extra small devices (phones, 600px and down) */

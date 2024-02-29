@@ -6,10 +6,19 @@ h2 {
     font-size: 2rem;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+}
+
 main {
+    flex: 1 !important;
     display: grid;
     grid-template-columns: 1.5fr minmax(0, 1fr);
     gap: 30px;
+    height: 100%;
+    margin-bottom: auto;
+    align-items: center;
 }
 
 .url-input-container,
@@ -25,53 +34,28 @@ main {
     background-color: white;
 }
 
-form {
-    display: flex;
-}
-
-form input {
-    border-radius: 10px 0 0 10px;
-}
-
-input {
-    flex: 1;
-}
-
-.btn-generate {
-    border-radius: 0 10px 10px 0;
-    margin-left: -2px;
+.url-input-container input {
+    border: none;
 }
 
 .options {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
 }
 
-.input-container {
-    display: flex;
-    align-items: center;
+.color-input-container input {
+    border: none;
+
+    border-radius: 5px;
 }
 
-.input-container input {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    width: 80px;
-    height: 90px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    border-radius: 10px;
+.color-input-container .foreground-input {
+    border-right: 60px solid #000;
 }
 
-.input-container input::-webkit-color-swatch {
-    border-radius: 15px;
-    border: none;
-}
-.input-container input::-moz-color-swatch {
-    border-radius: 15px;
-    border: none;
+.color-input-container .background-input {
+    border-right: 60px solid #adff2f;
 }
 
 .logo-input-container input {
@@ -89,8 +73,23 @@ input {
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
         rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     transition: all 1s ease;
-    max-width: 100%;
     height: max-content;
+}
+
+.url-container {
+    background-color: hwb(0 91% 9%);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.url {
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .qrcode-container {
@@ -103,15 +102,17 @@ input {
 }
 
 .qrcode-container img {
+    position: relative;
     flex: 1;
-    padding: 20px;
-    background-color: white;
+    padding: 50px;
+    background-color: #adff2f;
     border-radius: 10px;
     width: 100%;
+    transition: all 1s ease-in-out;
 }
 
 .qrcode-container img:hover {
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    box-shadow: rgba(80, 110, 141, 0.2) 0px 8px 24px;
     transition: all 0.3s ease-in-out;
 }
 
@@ -137,12 +138,64 @@ input {
     background-color: white;
 }
 
+.alert {
+    margin-top: unset;
+}
+
+.section-container {
+    background-color: rgb(241, 241, 241);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: unset;
+    width: 100%;
+    padding: 30px;
+}
+
+.section-get-started {
+    margin-bottom: unset;
+}
+
+section.section-get-started h4,
+.section-title {
+    text-align: center;
+}
+
+.section-get-started h4 {
+    color: rgb(41, 41, 41);
+}
+
+.section-get-started ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 15px;
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+.section-get-started ul li {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: black;
+    padding: 20px;
+    border-right: 1.5px solid black;
+}
+
+.section-get-started ul li:nth-child(4) {
+    border: none;
+}
+
+.section-title {
+    font-size: 2.6rem;
+    font-weight: 700;
+}
+
 @media only screen and (max-width: 800px) {
     main {
         grid-template-columns: 1fr;
         gap: 30px;
         padding: 15px;
-        max-width: 100%;
     }
 
     form {
@@ -155,9 +208,12 @@ input {
     }
 
     .btn-generate {
-        border-radius: 0 0 10px 10px;
         margin-top: -2px;
         margin-left: unset;
+    }
+
+    .options {
+        max-width: 92vw;
     }
 
     .result {
@@ -172,10 +228,8 @@ input {
 
     .qrcode-container canvas {
         max-width: 100%;
-    }
-
-    .qrcode-container img {
-        padding: 20px;
+        padding: 40px;
+        background-color: #34acdf;
     }
 
     .color-input-container div {
@@ -186,5 +240,15 @@ input {
     .color-input-container,
     .logo-input-container {
         flex: none;
+    }
+
+    .section-get-started ul {
+        grid-template-columns: 1fr;
+    }
+
+    .section-get-started ul li {
+        border: none;
+        border-bottom: 1.5px solid black;
+        padding: 30px 0;
     }
 }
