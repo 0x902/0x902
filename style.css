@@ -1,6 +1,7 @@
 body {
     display: flex;
     flex-direction: column;
+    max-width: 100%;
 }
 
 main {
@@ -63,6 +64,7 @@ input {
     padding: 15px;
     background-color: white;
     border-radius: 10px;
+    width: 100%;
 }
 
 .qrcode-container img:hover {
@@ -102,6 +104,7 @@ input {
 }
 
 .url {
+    max-width: 200px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -154,7 +157,7 @@ input {
     align-items: center;
     gap: 10px;
     font-size: 1.8rem;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .steps ul li h3 img {
@@ -192,6 +195,21 @@ a {
         padding: 15px;
     }
 
+    form {
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    form input {
+        border-radius: 10px 10px 0 0;
+    }
+
+    .btn-generate {
+        border-radius: 0 0 10px 10px;
+        margin-top: -2px;
+        margin-left: unset;
+    }
+
     .result {
         gap: 20px;
         padding: 10px;
@@ -203,7 +221,7 @@ a {
     }
 
     .qrcode-container img {
-        padding: 30px;
+        padding: 20px;
     }
 
     .steps-container {

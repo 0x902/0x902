@@ -18,6 +18,7 @@ body {
 }
 
 header {
+    width: 100%;
     display: flex;
     align-items: center;
     padding: 15px;
@@ -68,7 +69,6 @@ section {
 }
 
 .block {
-    width: 100%;
     max-width: 1000px;
     margin: 0 auto;
     margin-bottom: 100px;
