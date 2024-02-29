@@ -61,7 +61,7 @@ input {
 
 .qrcode-container img {
     flex: 1;
-    padding: 15px;
+    padding: 20px;
     background-color: white;
     border-radius: 10px;
     width: 100%;
@@ -220,9 +220,12 @@ a {
         padding: 0;
     }
 
+    .qrcode-container canvas {
+        max-width: 100%;
+    }
+
     .qrcode-container img {
         padding: 20px;
-        max-width: 100%;
     }
 
     .steps-container {
