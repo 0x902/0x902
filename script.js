@@ -27,6 +27,7 @@ floatingEmailBtn.addEventListener("click", function () {
 // add blogs dynamically from blogs folder
 function loadThoughts() {
     const blogTitles = [
+        "If I were a bird",
         "Silent Love, Unspoken",
         "Open Letter to the AI Crawler",
     ];
