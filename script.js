@@ -4,7 +4,7 @@ const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
 const collapseMenuBtn = document.querySelector(".collapse-menu-btn");
 const floatingEmailBtn = document.querySelector(".floating-email");
 
-feather.replace({ class: "social-icon", "stroke-width": 1 });
+feather.replace({ class: "social-icon", "stroke-width": 1.25 });
 
 // Change the cursor to the global custom cursor
 document.body.style.cursor = 'url("assets/cursor.png"), auto';
