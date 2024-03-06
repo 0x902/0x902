@@ -205,8 +205,8 @@
     text-align: center;
     background-color: var(--light);
     border-top: 2px solid var(--dark);
-    padding: 10px 0;
-    box-shadow: rgba(0, 0, 0, 0.8) 0px -10px 20px;
+    padding: 15px 0;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px -10px 20px;
     font-weight: 500;
     display: none;
     transition: all 1s ease-in-out;
@@ -221,7 +221,7 @@
     padding: 20px;
     font-weight: 400;
     background-color: var(--dark);
-    color: white;
+    color: var(--light);
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -236,6 +236,10 @@
 
     .projects ul {
         grid-template-columns: 1fr;
+    }
+
+    .projects ul li {
+        padding: 30px;
     }
 
     .thoughts ul li {
@@ -257,7 +261,8 @@
     }
 
     .btn-contact {
-        font-size: 16px;
+        font-size: 18px;
+        width: 100%;
     }
 
     .h1-hero img {

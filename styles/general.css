@@ -2,7 +2,7 @@
     --dark: #313638;
     --light: #fff;
     --grey: whitesmoke;
-    --grey-dark: #cecece;
+    --grey-dark: #dbdbdb;
 }
 
 /* Text selection color */
@@ -142,7 +142,7 @@ a.selected {
     transform: translateX(150%);
     background-color: var(--light);
     z-index: 998;
-    border-left: 2px solid black;
+    border-left: 2px solid var(--dark);
     box-shadow: rgba(0, 0, 0, 0.4) -30px 0px 80px;
 
     display: flex;

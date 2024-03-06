@@ -16,7 +16,7 @@ mobileMenuBtn.addEventListener("click", function () {
 });
 
 collapseMenuBtn.addEventListener("click", function () {
-    mobileMenuEl.style.transform = "translateX(120%)";
+    mobileMenuEl.style.transform = "translateX(150%)";
     document.body.style.overflowY = "scroll";
 });
 
