@@ -33,8 +33,9 @@ html {
 
 body {
     overflow-x: hidden;
-    font-family: "Roboto Mono", monospace;
+    font-family: "Nunito", sans-serif;
     background-color: rgb(250, 250, 248);
+    font-size: 18px;
 }
 
 /* Set max width and centers the block */
@@ -51,7 +52,6 @@ header {
 h1,
 h2,
 h3 {
-    font-family: "Outfit", sans-serif;
     font-weight: 700;
     color: #252525;
 }
@@ -85,6 +85,19 @@ a:active {
     text-decoration: line-through !important;
 }
 
+b {
+    font-weight: 600;
+}
+
+.btn-primary {
+    padding: 15px;
+    background-color: #252525;
+    width: max-content;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none !important;
+}
+
 /* Link button */
 .btn-link {
     font-weight: 600;
@@ -98,7 +111,6 @@ a:active {
 
 header nav ul {
     display: flex;
-    gap: 30px;
     list-style-type: none;
     justify-content: space-between;
     align-items: center;
@@ -107,7 +119,7 @@ header nav ul {
 }
 
 a.selected {
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .mobile-menu-btn {
@@ -123,11 +135,11 @@ a.selected {
 .mobile-menu {
     transition: all 0.5s ease-in-out;
     position: fixed;
-    top: -20px;
-    bottom: -20px;
+    top: -10px;
+    bottom: -10px;
     left: 0;
     right: 0;
-    transform: translateX(120%);
+    transform: translateX(150%);
     background-color: #f5f5f5;
     z-index: 998;
     border-left: 2px solid black;
@@ -151,17 +163,16 @@ a.selected {
     display: flex;
     align-items: center;
     justify-content: center;
-    left: -45px;
+    left: -80px;
     top: 0;
     bottom: 0;
     z-index: 997;
 }
 
 .collapse-menu-btn {
-    width: 45px;
-    height: 45px;
-    padding: 10px;
-    border-radius: 10px 0 0 10px;
+    height: 60px;
+    width: 60px;
+    padding: 15px;
     border: 2px solid black;
     background-color: #f5f5f5;
 }
@@ -205,11 +216,10 @@ a.selected {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50px;
-    height: 50px;
-    border-radius: 100px;
+    width: 65px;
+    height: 65px;
+    border-radius: 12px;
     border: 2px solid black;
-    padding: 10px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 

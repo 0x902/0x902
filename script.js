@@ -4,14 +4,14 @@ const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
 const collapseMenuBtn = document.querySelector(".collapse-menu-btn");
 const floatingEmailBtn = document.querySelector(".floating-email");
 
-feather.replace({ class: "social-icon", "stroke-width": 1.15 });
+feather.replace({ class: "social-icon", "stroke-width": 1 });
 
 // Change the cursor to the global custom cursor
 document.body.style.cursor = 'url("assets/cursor.png"), auto';
 
 // mobile menu functionality
 mobileMenuBtn.addEventListener("click", function () {
-    mobileMenuEl.style.transform = "translateX(20%)";
+    mobileMenuEl.style.transform = "translateX(30%)";
     document.body.style.overflow = "hidden";
 });
 
