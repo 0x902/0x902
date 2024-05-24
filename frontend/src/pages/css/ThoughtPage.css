@@ -1,0 +1,34 @@
+.thought-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.thought-container .thought-title {
+    font-weight: 600;
+}
+
+.thought-container .date {
+    font-style: italic;
+}
+
+.thought-container pre {
+    font-size: 16px;
+    background-color: #f4f4f4; /* light gray background */
+    color: #333; /* dark gray text color */
+    padding: 20px; /* space inside the element */
+    border: 1px solid #dadada; /* light gray border */
+    overflow: auto; /* scrollable overflow */
+    white-space: pre-wrap; /* wrap text */
+    line-height: 1.5; /* improve readability */
+}
+
+#loading-thought {
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    padding: 20px;
+    background-color: #dadada;
+    border-radius: 100px;
+    width: max-content;
+}

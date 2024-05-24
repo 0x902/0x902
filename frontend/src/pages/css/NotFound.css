@@ -1,0 +1,17 @@
+.not-found-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    min-height: 100vh;
+}
+
+
+.not-found-container h1 {
+    font-weight: 500;
+}
+
+.not-found-container a {
+    color: #ff7300;
+}

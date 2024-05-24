@@ -1,0 +1,43 @@
+.technologies-container table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.technologies-container  h2 {
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+tr {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+tr, td {
+    border: 1px solid rgb(229, 229, 229);
+}
+
+td {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-wrap: nowrap;
+    padding: 20px;
+    transition: color .3s ease;
+    cursor: pointer;
+}
+
+td:hover {
+    color: #ff7300;
+    border: 1px solid #ff7300;
+}
+
+@media only screen and (max-width: 600px) {
+    .block {
+        margin-bottom: 50px;
+    }
+
+    tr {
+        grid-template-columns: 1fr 1fr;
+    }
+}

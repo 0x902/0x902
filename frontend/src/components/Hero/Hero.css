@@ -1,0 +1,63 @@
+.hero-container {
+    min-height: 30vh;
+
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-container h1 {
+    position: relative;
+    max-width: max-content;
+    font-size: 56px;
+    color: #3e3e3e;
+}
+
+.hero-container h1 span {
+    position: absolute;
+    right: -40px;
+    top: -10px;
+    color: #ff7300;
+    font-size: 45px;
+
+    transition: transform 1s ease;
+}
+
+.hero-container h1 span:hover {
+    transform: rotateZ(20deg);
+    cursor: pointer;
+}
+
+.btn-contact {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.hero-description {
+    max-width: 75%;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .hero-container h1 {
+        font-size: 36px;
+    }
+
+    .hero-container h1 span {
+        position: absolute;
+        right: -25px;
+        top: -5px;
+        color: #ff7300;
+        font-size: 28px;
+    }
+
+    .hero-description {
+        max-width: unset;
+        line-height: 1.6;
+        text-align: justify;
+    }
+}
