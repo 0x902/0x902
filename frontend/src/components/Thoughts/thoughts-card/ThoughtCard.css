@@ -19,3 +19,30 @@
     gap: 30px;
     font-weight: 500;
 }
+
+@media only screen and (max-width: 600px) {
+    .thought-card {
+        flex-direction: column;
+        gap: 0;
+        margin-bottom: 20px;
+    }
+    
+    .thought-card .thought-date {
+        padding: 10px;
+        font-size: 15px;
+        background-color: rgb(235, 235, 235);
+        width: max-content;
+        color: #3c3c3c;
+        border-radius: 5px 5px 0 0;
+    }
+
+    .thought-card a {
+        padding: 10px;
+        background-color: rgb(218, 218, 218);
+        width: 100%;
+        border-radius: 0 5px 5px 5px;
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+    }
+}

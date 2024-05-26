@@ -21,8 +21,9 @@
     top: -10px;
     color: #ff7300;
     font-size: 45px;
+    text-shadow: 3px 3px 5px rgba(000,000,000,.2);
 
-    transition: transform 1s ease;
+    transition: all 1s ease;
 }
 
 .hero-container h1 span:hover {
@@ -41,8 +42,28 @@
     text-align: justify;
 }
 
+.hero-actions {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.hero-actions .github-cta {
+    text-decoration: none;
+    font-size: 1.4rem;
+    transition: color .3s ease;
+}
+
+.hero-actions .github-cta:hover {
+    color: #ff7300;
+}
 
 @media only screen and (max-width: 600px) {
+
+    .hero-container {
+        align-items: center;
+    }
+
     .hero-container h1 {
         font-size: 36px;
     }
@@ -58,6 +79,6 @@
     .hero-description {
         max-width: unset;
         line-height: 1.6;
-        text-align: justify;
+        text-align: center;
     }
 }

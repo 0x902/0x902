@@ -9,5 +9,7 @@ footer {
 @media only screen and (max-width: 600px) {
     footer {
         margin-bottom: 0 !important;
+        align-items: center;
+        gap: 10px;
     }
 }

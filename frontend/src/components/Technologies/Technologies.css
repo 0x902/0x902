@@ -40,4 +40,9 @@ td:hover {
     tr {
         grid-template-columns: 1fr 1fr;
     }
+
+    td {
+        flex-direction: column;
+        justify-content: center;
+    }
 }
