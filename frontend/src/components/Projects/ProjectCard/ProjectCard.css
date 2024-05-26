@@ -10,8 +10,8 @@
 }
 
 .project-card .decor {
-    border-left: 2px solid rgb(210, 210, 210);
-    border-bottom: 2px solid rgb(210, 210, 210);
+    border-left: 2px solid rgb(217, 217, 217);
+    border-bottom: 2px solid rgb(217, 217, 217);
     position: absolute;
     left: -50px;
     padding: 15px;
@@ -28,4 +28,17 @@
     display: flex;
     gap: 30px;
     font-weight: 500;
+}
+
+.project-card .tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.project-card .tech-stack div {
+    padding: 5px;
+    font-size: 13px;
+    letter-spacing: 1.3px;
+    background-color: rgb(228, 228, 228);
 }

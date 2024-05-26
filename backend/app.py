@@ -47,11 +47,12 @@ def create():
 def create_project():
     title = request.form.get("project-title")
     description = request.form.get("project-description")
+    technologies = request.form.get("project-technologies")
     preview = request.form.get("project-preview")
     year = int(request.form.get("project-year"))
 
     if title and description and preview and year:
-        new_project = Project(title=title, description=description, year=year, preview=preview)
+        new_project = Project(title=title, description=description,technologies=technologies, year=year, preview=preview)
         session.add(new_project)
         session.commit()
         return "Created project...", 200

@@ -19,12 +19,14 @@ class Project(Base):
     id = Column("id", String, primary_key=True, default=generate_id)
     title = Column("title", String, nullable=False)
     description = Column("description", String, nullable=False)
+    technologies = Column("technologies", String, nullable=False)
     year = Column("year", Integer, nullable=False)
     preview = Column("preview", String, nullable=False)
 
-    def __init__(self, title, description, year, preview):
+    def __init__(self, title, description, technologies, year, preview):
         self.title = title
         self.description = description
+        self.technologies = technologies
         self.preview = preview
         self.year = year
 
@@ -33,6 +35,7 @@ class Project(Base):
             "id": self.id,
             "title" : self.title,
             "description" : self.description,
+            "technologies": self.technologies,
             "year": self.year,
             "preview" : self.preview,
         }

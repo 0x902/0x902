@@ -6,8 +6,6 @@ import "./css/ThoughtPage.css"
 
 export default function ThoughtPage() {
     const params = useParams()
-    const navigate = useNavigate();
-
     const thoughtId = params.thoughtId
 
     const [title, setTitle] = useState("")
