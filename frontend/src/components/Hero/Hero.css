@@ -12,16 +12,15 @@
     position: relative;
     max-width: max-content;
     font-size: 56px;
-    color: #3e3e3e;
+    color: var(--gray);
 }
 
 .hero-container h1 span {
     position: absolute;
     right: -40px;
     top: -10px;
-    color: #ff7300;
+    color: var(--primary-light);
     font-size: 45px;
-    text-shadow: 3px 3px 5px rgba(000,000,000,.2);
 
     transition: all 1s ease;
 }
@@ -51,15 +50,14 @@
 .hero-actions .github-cta {
     text-decoration: none;
     font-size: 1.4rem;
-    transition: color .3s ease;
+    transition: color 0.3s ease;
 }
 
 .hero-actions .github-cta:hover {
-    color: #ff7300;
+    color: var(--primary-light);
 }
 
 @media only screen and (max-width: 600px) {
-
     .hero-container {
         align-items: center;
     }
@@ -72,7 +70,7 @@
         position: absolute;
         right: -25px;
         top: -5px;
-        color: #ff7300;
+        color: var(--primary-light);
         font-size: 28px;
     }
 

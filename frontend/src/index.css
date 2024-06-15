@@ -1,7 +1,22 @@
+:root {
+    --primary-dark: #f3582c;
+    --primary-light: #ff6131;
+    --secondary: #ffd986;
+    --secondary-light: #fef6e1;
+    --background: #f8f8f8;
+    --text-dark: black;
+    --gray: #3e3e3e;
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+::selection {
+    background-color: var(--primary-light);
+    color: white;
 }
 
 html {
@@ -10,8 +25,8 @@ html {
 
 body {
     font-family: "IBM Plex Mono", monospace;
-    background-color: #F3F4F1;
-    border-bottom: 8px solid #ff7300;
+    background-color: var(--background);
+    border-bottom: 8px solid var(--primary-light);
     min-height: 100vh;
 }
 
@@ -27,7 +42,7 @@ body {
 }
 
 a {
-    color: #3E3E3E;
+    color: var(--gray);
     text-underline-offset: 3px;
 }
 

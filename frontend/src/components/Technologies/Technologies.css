@@ -3,7 +3,7 @@
     width: 100%;
 }
 
-.technologies-container  h2 {
+.technologies-container h2 {
     margin-bottom: 20px;
     font-weight: 500;
 }
@@ -13,7 +13,8 @@ tr {
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-tr, td {
+tr,
+td {
     border: 1px solid rgb(229, 229, 229);
 }
 
@@ -23,13 +24,13 @@ td {
     gap: 10px;
     text-wrap: nowrap;
     padding: 20px;
-    transition: color .3s ease;
+    transition: color 0.3s ease;
     cursor: pointer;
 }
 
 td:hover {
-    color: #ff7300;
-    border: 1px solid #ff7300;
+    color: var(--primary-light);
+    border: 1px solid var(--primary-light);
 }
 
 @media only screen and (max-width: 600px) {

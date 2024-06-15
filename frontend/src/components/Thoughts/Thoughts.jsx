@@ -1,46 +1,66 @@
-import { useState, useEffect } from "react"
-import "./Thoughts.css"
-import ThoughtCard from "./thoughts-card/ThoughtCard"
+import { useState, useEffect } from "react";
+import "./Thoughts.css";
+import ThoughtCard from "./thoughts-card/ThoughtCard";
 
 function Thoughts() {
-    const [thoughts, setThoughts] = useState([])
-    const [thoughtsFetchError, setThoughtsFetchError] = useState("Loading thoughts...")
+    const [thoughts, setThoughts] = useState([]);
+    const [thoughtsFetchError, setThoughtsFetchError] = useState("");
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetchThoughts()
-    }, [])
+        fetchWithRetry(4);
+    }, []);
 
     async function fetchThoughts() {
-        const thoughtsLoadingEl = document.getElementById("loading-thoughts")
-        const url = "https://0x902.pythonanywhere.com/thoughts"
-        // const url = "http://127.0.0.1:5000/thoughts"
+        const url = "https://0x902.pythonanywhere.com/thoughts";
+        // const url = "http://127.0.0.1:5000/thoughts";
 
+        const response = await fetch(url);
+
+        if (!response.ok) {
+            throw new Error("Network response was not ok");
+        }
+
+        const json = await response.json();
+
+        if (json.error) {
+            throw new Error(`Error: ${json.error}`);
+        }
+
+        setThoughts(json.thoughts);
+    }
+
+    async function fetchWithRetry(retries) {
         try {
-            const response = await fetch(url)
-            const json = await response.json()
-    
-            if (json.error) {
-                setThoughtsFetchError(prevErr => `Error: ${json.error}`)
+            await fetchThoughts();
+            setThoughtsFetchError("");
+        } catch (err) {
+            if (retries > 0) {
+                console.log(`Retrying... ${retries} attempts left.`);
+                await fetchWithRetry(retries - 1);
             } else {
-                setThoughts(prev => prev = json.thoughts)
-                thoughtsLoadingEl.classList.add("hidden")
+                console.error("Fetching failed: ", err);
+                setThoughtsFetchError(`Error: ${err.message}`);
             }
-        } catch(err) {
-            setThoughtsFetchError(prevErr => `Error: ${err}`)
+        } finally {
+            setLoading(false);
         }
     }
 
     return (
         <div className="thoughts-container block" id="thoughts">
-            <h2>Thoughts({thoughts.length})</h2>
-            <p id="loading-thoughts">{thoughtsFetchError}</p>
-            {
-                thoughts.map(thought => (
-                    <ThoughtCard key={thought.id} thought={thought}/>
+            <h2>Thoughts ({thoughts.length})</h2>
+            {loading ? (
+                <p id="loading-thoughts">Loading thoughts...</p>
+            ) : thoughtsFetchError ? (
+                <p id="loading-thoughts">{thoughtsFetchError}</p>
+            ) : (
+                thoughts.map((thought) => (
+                    <ThoughtCard key={thought.id} thought={thought} />
                 ))
-            }
+            )}
         </div>
-    )
+    );
 }
 
-export default Thoughts
+export default Thoughts;
