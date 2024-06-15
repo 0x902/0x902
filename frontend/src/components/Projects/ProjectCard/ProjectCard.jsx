@@ -1,22 +1,24 @@
-import "./ProjectCard.css"
+import "./ProjectCard.css";
 
-function ProjectCard({project}) {
-    console.log(project)
+function ProjectCard({ project }) {
+    console.log(project);
     return (
         <div className="project-card">
             <div className="decor"></div>
-            <a target="_balnk" href={project.preview}>{project.title}, {project.year} &rarr;</a>
+            <a target="_balnk" href={project.preview}>
+                {project.title}, {project.year} &rarr;
+            </a>
             <div className="tech-stack">
-                {
-                    project.technologies.trim().split(",").map((tech, index) => (
+                {project.technologies
+                    .trim()
+                    .split(",")
+                    .map((tech, index) => (
                         <div key={index}>{tech}</div>
-                    ))
-                }
+                    ))}
             </div>
             <p>{project.description}</p>
         </div>
-    )
+    );
 }
 
-
-export default ProjectCard
+export default ProjectCard;

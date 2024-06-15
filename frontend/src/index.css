@@ -1,11 +1,23 @@
 :root {
     --primary-dark: #f3582c;
     --primary-light: #ff6131;
-    --secondary: #ffd986;
+    --secondary-dark: #ffd986;
     --secondary-light: #fef6e1;
     --background: #f8f8f8;
     --text-dark: black;
     --gray: #3e3e3e;
+}
+
+@font-face {
+    font-family: "IckyTicket";
+    src: url("../src/assets/ickyticket.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Applying the custom font to body */
+body {
+    font-family: "CustomFont", sans-serif;
 }
 
 * {
@@ -24,7 +36,8 @@ html {
 }
 
 body {
-    font-family: "IBM Plex Mono", monospace;
+    font-family: "Space Mono", monospace;
+    font-size: 1.1rem;
     background-color: var(--background);
     border-bottom: 8px solid var(--primary-light);
     min-height: 100vh;

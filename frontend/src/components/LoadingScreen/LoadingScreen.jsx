@@ -7,6 +7,9 @@ function LoadingScreen() {
     return (
         <div className="loading-screen">
             <img src={eye} alt="loading animation" />
+            <div className="progress-bar">
+                <div className="progress"></div>
+            </div>
         </div>
     );
 }

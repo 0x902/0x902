@@ -9,6 +9,7 @@
 }
 
 .hero-container h1 {
+    font-family: "IckyTicket";
     position: relative;
     max-width: max-content;
     font-size: 56px;
@@ -17,8 +18,8 @@
 
 .hero-container h1 span {
     position: absolute;
-    right: -40px;
-    top: -10px;
+    right: -30px;
+    top: 0px;
     color: var(--primary-light);
     font-size: 45px;
 

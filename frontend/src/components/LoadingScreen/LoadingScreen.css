@@ -14,3 +14,27 @@
     max-width: 200px;
     pointer-events: none;
 }
+
+.progress-bar {
+    width: 170px;
+    height: 13px;
+    background-color: var(--secondary-dark);
+    outline: 5px solid white;
+    border: 2px solid black;
+    position: relative;
+}
+
+.progress {
+    background-color: var(--primary-light);
+    transition: width 3.2s ease-in;
+    width: 10%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-right: 2px solid black;
+}
+
+.progress.expand {
+    width: 100%;
+}

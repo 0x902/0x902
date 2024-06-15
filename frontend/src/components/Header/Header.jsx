@@ -1,10 +1,12 @@
-import "./Header.css"
-import { Link } from "react-router-dom"
+import "./Header.css";
+import { Link } from "react-router-dom";
 
 function Header() {
     return (
         <header className="block">
-            <Link className="header-logo" to={"/"}>Y!</Link>
+            <Link className="header-logo" to={"/"}>
+                ya.
+            </Link>
             <ul>
                 <li>
                     <Link to={"/"}>Home</Link>
@@ -17,7 +19,7 @@ function Header() {
                 </li>
             </ul>
         </header>
-    )
+    );
 }
 
-export default Header
+export default Header;
