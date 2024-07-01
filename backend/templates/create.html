@@ -1,57 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yasir Ahmed &mdash; Create</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Yasir Ahmed &mdash; Create</title>
 
-    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
-</head>
-<body>
-    <form action="/create-project", method="post">
-        <h1>Create Project</h1>
-        <div class="input-container">
-            <label for="project-title">Project Title</label>
-            <input type="text" name="project-title" id="project-title" placeholder="Project title" required>
-        </div>
-        <div class="input-container">
-            <label for="project-description">Project description</label>
-            <input type="text" name="project-description" id="project-description" placeholder="Project description" required>
-        </div>
-        <div class="input-container">
-            <label for="project-technologies">Project technologies</label>
-            <input type="text" name="project-technologies" id="project-technologies" placeholder="Project technologies" required>
-        </div>
-        <div class="input-container">
-            <label for="project-preview">Project preview link</label>
-            <input type="text" name="project-preview" id="project-preview" placeholder="Project preview" required>
-        </div>
-        <div class="input-container">
-            <label for="project-year">Project year</label>
-            <input type="text" name="project-year" id="project-year" placeholder="Project year" required>
-        </div>
-        <button type="submit">Add Project</button>
-    </form>
+        <link
+            rel="stylesheet"
+            href="{{url_for('static', filename='css/style.css')}}"
+        />
+    </head>
+    <body>
+        <form action="/create-project" , method="post">
+            <h1>Create Project</h1>
+            <div class="input-container">
+                <label for="project-title">Master Password</label>
+                <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    placeholder="Master Password"
+                    required
+                />
+            </div>
+            <div class="input-container">
+                <label for="project-title">Project Title</label>
+                <input
+                    type="text"
+                    name="project-title"
+                    id="project-title"
+                    placeholder="Project title"
+                    required
+                />
+            </div>
+            <div class="input-container">
+                <label for="project-description">Project description</label>
+                <input
+                    type="text"
+                    name="project-description"
+                    id="project-description"
+                    placeholder="Project description"
+                    required
+                />
+            </div>
+            <div class="input-container">
+                <label for="project-technologies">Project technologies</label>
+                <input
+                    type="text"
+                    name="project-technologies"
+                    id="project-technologies"
+                    placeholder="Project technologies"
+                    required
+                />
+            </div>
+            <div class="input-container">
+                <label for="project-preview">Project preview link</label>
+                <input
+                    type="text"
+                    name="project-preview"
+                    id="project-preview"
+                    placeholder="Project preview"
+                    required
+                />
+            </div>
+            <div class="input-container">
+                <label for="project-year">Project year</label>
+                <input
+                    type="text"
+                    name="project-year"
+                    id="project-year"
+                    placeholder="Project year"
+                    required
+                />
+            </div>
+            <button type="submit">Add Project</button>
+        </form>
 
-    <form action="/create-thought", method="post">
-        <h1>Create Thought</h1>
-        <div class="input-container">
-            <label for="thought-title">Thought title</label>
-            <input type="text" name="thought-title" id="thought-title" placeholder="Thought title" required>
-        </div>
-        <div class="input-container">
-            <label for="project-preview">Thought content</label>
-            <textarea rows="30" placeholder="thought-content" name="thought-content" id="thought-content"></textarea>
-        </div>
-        <div class="input-container">
-            <label for="thought-tags">Thought tags</label>
-            <input type="text" name="thought-tags" id="thought-tags" placeholder="Thought tags" required>
-        </div>
-        <div class="input-container">
-            <label for="thought-date">Thought date</label>
-            <input type="date" name="thought-date" id="thought-date" placeholder="Thought date" required>
-        </div>
-        <button type="submit">Add Thought</button>
-    </form>
-</body>
+        <form action="/create-thought" , method="post">
+            <h1>Create Thought</h1>
+            <div class="input-container">
+                <label for="project-title">Master Password</label>
+                <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    placeholder="Master Password"
+                    required
+                />
+            </div>
+            <div class="input-container">
+                <label for="thought-title">Thought title</label>
+                <input
+                    type="text"
+                    name="thought-title"
+                    id="thought-title"
+                    placeholder="Thought title"
+                    required
+                />
+            </div>
+            <div class="input-container">
+                <label for="project-preview">Thought content</label>
+                <textarea
+                    rows="30"
+                    placeholder="thought-content"
+                    name="thought-content"
+                    id="thought-content"
+                ></textarea>
+            </div>
+            <div class="input-container">
+                <label for="thought-tags">Thought tags</label>
+                <input
+                    type="text"
+                    name="thought-tags"
+                    id="thought-tags"
+                    placeholder="Thought tags"
+                    required
+                />
+            </div>
+            <div class="input-container">
+                <label for="thought-date">Thought date</label>
+                <input
+                    type="date"
+                    name="thought-date"
+                    id="thought-date"
+                    placeholder="Thought date"
+                    required
+                />
+            </div>
+            <button type="submit">Add Thought</button>
+        </form>
+    </body>
 </html>

@@ -49,8 +49,5 @@ I journey forth, creating, I refuse to lose.
 ## Hello World!! 🤔
 
 -   💬 Ask me about anything an everything.
--   📫 Read my blogs: [0x902's Diary](https://medium.com/@0x902).
 -   🎯 Portfolio site: [Portfolio](https://0x902.netlify.app).
--   📸 Follow: [0x902.1](https://www.instagram.com/0x920.1).
--   ✒️ Tweet: [0x902_1](https://twitter.com/0x902_1).
 -   ⚡ Fun fact: The fear of long words is called Hippopotomonstrosesquippedaliophobia.
