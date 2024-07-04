@@ -16,7 +16,7 @@
 
 .thought-card .actions {
     display: flex;
-    gap: 30px;
+    gap: 10px;
     font-weight: 500;
 }
 
@@ -26,23 +26,30 @@
         gap: 0;
         margin-bottom: 20px;
     }
-    
+
     .thought-card .thought-date {
         padding: 10px;
-        font-size: 15px;
-        background-color: rgb(235, 235, 235);
+        font-size: 14px;
+        background-color: var(--primary-dark);
         width: max-content;
-        color: #3c3c3c;
-        border-radius: 5px 5px 0 0;
+        color: #ffffff;
+        border-radius: 8px 8px 0 0;
     }
 
     .thought-card a {
-        padding: 10px;
-        background-color: rgb(218, 218, 218);
+        padding: 15px;
+        background-color: var(--primary-light);
         width: 100%;
-        border-radius: 0 5px 5px 5px;
+        border-radius: 0 8px 8px 8px;
         text-decoration: none;
-        color: black;
+        color: white;
         font-weight: 500;
+        font-size: 18px;
+        height: 100%;
+        box-shadow: -2px 0 8px rgba(000, 000, 000, 0.2);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }

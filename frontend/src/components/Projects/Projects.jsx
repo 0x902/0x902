@@ -15,8 +15,8 @@ function Projects() {
     }, []);
 
     async function fetchProjects() {
-        // const url = "https://0x902.pythonanywhere.com/projects";
-        const url = "http://127.0.0.1:5000/projects";
+        const url = "https://0x902.pythonanywhere.com/projects";
+        // const url = "http://127.0.0.1:5000/projects";
 
         const response = await fetch(url);
 

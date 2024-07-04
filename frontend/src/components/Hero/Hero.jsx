@@ -9,8 +9,8 @@ function Hero() {
     }, []);
 
     const fetchStatus = async () => {
-        // const url = "https://0x902.pythonanywhere.com/status";
-        const url = "http://127.0.0.1:5000/status";
+        const url = "https://0x902.pythonanywhere.com/status";
+        // const url = "http://127.0.0.1:5000/status";
 
         const response = await fetch(url);
         const json = await response.json();

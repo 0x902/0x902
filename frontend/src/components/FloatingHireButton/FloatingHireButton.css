@@ -1,14 +1,14 @@
 .fab-hire {
     position: fixed;
-    right: 30px;
-    bottom: 30px;
+    right: 20px;
+    bottom: 20px;
     width: 70px;
     height: 70px;
-    border-radius: 100px;
+    border-radius: 20px;
     border: none;
     padding: 15px;
 
-    box-shadow: 3px 3px 5px rgba(000, 000, 000, 0.2);
+    box-shadow: 1px 1px 8px rgba(000, 000, 000, 0.2);
     background-color: whitesmoke;
     cursor: pointer;
     z-index: 100;

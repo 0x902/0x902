@@ -39,7 +39,7 @@ body {
     font-family: "Space Mono", monospace;
     font-size: 1.1rem;
     background-color: var(--background);
-    border-bottom: 8px solid var(--primary-light);
+    border-bottom: 10px solid var(--primary-light);
     min-height: 100vh;
 }
 

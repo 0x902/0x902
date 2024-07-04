@@ -13,7 +13,7 @@
     font-size: 18px;
     background-color: #ffffff; /* light gray background */
     color: #000000; /* dark gray text color */
-    padding: 25px; /* space inside the element */
+    padding: 15px; /* space inside the element */
     border: 1px solid #dadada; /* light gray border */
     overflow: auto; /* scrollable overflow */
     white-space: pre-wrap; /* wrap text */

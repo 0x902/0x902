@@ -15,8 +15,8 @@ function Thoughts() {
     }, []);
 
     async function fetchThoughts() {
-        // const url = "https://0x902.pythonanywhere.com/thoughts";
-        const url = "http://127.0.0.1:5000/thoughts";
+        const url = "https://0x902.pythonanywhere.com/thoughts";
+        // const url = "http://127.0.0.1:5000/thoughts";
 
         const response = await fetch(url);
 

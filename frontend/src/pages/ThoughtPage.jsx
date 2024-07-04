@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import NotFound from "./NotFound";
 import Header from "../components/Header/Header";
 import "./css/ThoughtPage.css";
+import Footer from "../components/Footer/Footer";
 
 import { metronome } from "ldrs";
 metronome.register();
@@ -62,6 +63,7 @@ export default function ThoughtPage() {
                 <pre>{content}</pre>
                 <p className="tags">Tags: {tags.toLowerCase()}</p>
             </div>
+            <Footer />
         </div>
     );
 }

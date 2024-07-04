@@ -43,3 +43,15 @@
     letter-spacing: 1.3px;
     background-color: #e4e4e4;
 }
+
+@media only screen and (max-width: 600px) {
+    .project-card .decor {
+        left: -50px;
+        padding: 15px;
+        width: 30px;
+    }
+
+    .project-card {
+        padding-left: 10px;
+    }
+}
