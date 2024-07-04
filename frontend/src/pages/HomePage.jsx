@@ -6,6 +6,12 @@ import Projects from "../components/Projects/Projects.jsx";
 import Thoughts from "../components/Thoughts/Thoughts.jsx";
 import Footer from "../components/Footer/Footer.jsx";
 import LoadingScreen from "../components/LoadingScreen/LoadingScreen.jsx";
+import FloatingHireButton from "../components/FloatingHireButton/FloatingHireButton.jsx";
+
+window.onload = function () {
+    var progressElement = document.querySelector(".progress");
+    progressElement.classList.add("expand");
+};
 
 function HomePage() {
     const [loading, setLoading] = useState(true);
@@ -39,6 +45,7 @@ function HomePage() {
                 <>
                     <Header />
                     <Hero />
+                    <FloatingHireButton />
                     <Technologies />
                     <Projects />
                     <Thoughts />

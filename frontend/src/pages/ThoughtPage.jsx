@@ -4,6 +4,9 @@ import NotFound from "./NotFound";
 import Header from "../components/Header/Header";
 import "./css/ThoughtPage.css";
 
+import { metronome } from "ldrs";
+metronome.register();
+
 export default function ThoughtPage() {
     const params = useParams();
     const thoughtId = params.thoughtId;
@@ -46,6 +49,11 @@ export default function ThoughtPage() {
         <div>
             <Header />
             <h2 id="loading-thought" className="block">
+                <l-metronome
+                    size="70"
+                    speed="1.6"
+                    color="#f3582c"
+                ></l-metronome>
                 Loading thought...
             </h2>
             <div className="hidden block thought-container">

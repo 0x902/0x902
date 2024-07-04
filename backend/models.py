@@ -63,6 +63,20 @@ class Thought(Base):
             "tags": self.tags,
             "date": str(self.date)
         }
+
+class Status(Base):
+    __tablename__ = "status"
+    id = Column("id", String, primary_key=True, default=generate_id)
+    status = Column("status", String, nullable=False)
+
+    def __init__(self, status):
+        self.status = status
+
+    def status_info(self):
+        return {
+            "status" : self.status
+        }
+
     
 
 Base.metadata.create_all(bind=engine)

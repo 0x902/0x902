@@ -1,7 +1,7 @@
 from flask import Flask, jsonify, request, render_template
 from flask_cors import CORS
 
-from models import session, Project, Thought
+from models import session, Project, Thought, Status
 
 app = Flask(__name__)
 CORS(app)
@@ -31,6 +31,16 @@ def thoughts():
     else:
         return jsonify({"error": "No thoughts found..." }), 404
     
+@app.route("/status", methods=["GET"])
+def status():
+    query_results = session.query(Status).first()
+
+    if query_results:
+        return jsonify({"status": query_results.status_info()}), 200
+    else:
+        return jsonify({"status": "In-Available for hire" }), 200
+    
+
 @app.route("/thoughts/<string:thoughtId>", methods=["GET"])
 def get_thought(thoughtId):
     query_result = session.query(Thought).filter(Thought.id == thoughtId).first()
@@ -83,7 +93,22 @@ def create_thought():
             return "Wrong Password...", 500
     else:
         return "You missed to input a field...", 500
+    
+@app.route("/update-status", methods=["POST"])
+def update_status():
+    password = request.form.get("password")
+    status = request.form.get("status")
 
+
+    if status and password:
+        if password == secret:
+            session.query(Status).first().status = status
+            session.commit()
+            return "Updated status...", 200
+        else:
+            return "Wrong Password...", 500
+    else:
+        return "You missed to input a field...", 500
 
 
 if __name__ == "__main__":

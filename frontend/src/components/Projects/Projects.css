@@ -2,3 +2,9 @@
     margin-bottom: 30px;
     font-weight: 500;
 }
+
+.projects-loading-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}

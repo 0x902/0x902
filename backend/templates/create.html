@@ -11,10 +11,34 @@
         />
     </head>
     <body>
+        <form action="/update-status" , method="post">
+            <h1>Update Status</h1>
+            <div class="input-container">
+                <label for="password">Master Password</label>
+                <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    placeholder="Master Password"
+                    required
+                />
+            </div>
+            <div class="input-container">
+                <label for="status">Status</label>
+                <input
+                    type="text"
+                    name="status"
+                    id="status"
+                    placeholder="Learning React"
+                    required
+                />
+            </div>
+            <button type="submit">Update Status</button>
+        </form>
         <form action="/create-project" , method="post">
             <h1>Create Project</h1>
             <div class="input-container">
-                <label for="project-title">Master Password</label>
+                <label for="password">Master Password</label>
                 <input
                     type="password"
                     name="password"
@@ -79,7 +103,7 @@
         <form action="/create-thought" , method="post">
             <h1>Create Thought</h1>
             <div class="input-container">
-                <label for="project-title">Master Password</label>
+                <label for="password">Master Password</label>
                 <input
                     type="password"
                     name="password"

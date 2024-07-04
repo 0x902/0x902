@@ -1,7 +1,6 @@
 import "./ProjectCard.css";
 
 function ProjectCard({ project }) {
-    console.log(project);
     return (
         <div className="project-card">
             <div className="decor"></div>

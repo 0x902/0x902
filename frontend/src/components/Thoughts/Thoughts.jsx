@@ -2,6 +2,9 @@ import { useState, useEffect } from "react";
 import "./Thoughts.css";
 import ThoughtCard from "./thoughts-card/ThoughtCard";
 
+import { metronome } from "ldrs";
+metronome.register();
+
 function Thoughts() {
     const [thoughts, setThoughts] = useState([]);
     const [thoughtsFetchError, setThoughtsFetchError] = useState("");
@@ -12,8 +15,8 @@ function Thoughts() {
     }, []);
 
     async function fetchThoughts() {
-        const url = "https://0x902.pythonanywhere.com/thoughts";
-        // const url = "http://127.0.0.1:5000/thoughts";
+        // const url = "https://0x902.pythonanywhere.com/thoughts";
+        const url = "http://127.0.0.1:5000/thoughts";
 
         const response = await fetch(url);
 
@@ -51,9 +54,20 @@ function Thoughts() {
         <div className="thoughts-container block" id="thoughts">
             <h2>Thoughts ({thoughts.length})</h2>
             {loading ? (
-                <p id="loading-thoughts">Loading thoughts...</p>
+                <div className="thoughts-loading-container">
+                    <l-metronome
+                        size="40"
+                        speed="1.6"
+                        color="#f3582c"
+                    ></l-metronome>
+                    Loading thoughts...
+                </div>
             ) : thoughtsFetchError ? (
-                <p id="loading-thoughts">{thoughtsFetchError}</p>
+                <p id="loading-thoughts">
+                    {thoughtsFetchError}
+                    <br />
+                    <button onClick={fetchWithRetry}>Retry</button>
+                </p>
             ) : (
                 thoughts.map((thought) => (
                     <ThoughtCard key={thought.id} thought={thought} />

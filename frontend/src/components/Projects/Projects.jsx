@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import "./Projects.css";
 import ProjectCard from "./ProjectCard/ProjectCard.jsx";
 
+import { metronome } from "ldrs";
+metronome.register();
+
 function Projects() {
     const [projects, setProjects] = useState([]);
     const [projectsFetchError, setProjectsFetchError] = useState("");
@@ -12,8 +15,8 @@ function Projects() {
     }, []);
 
     async function fetchProjects() {
-        const url = "https://0x902.pythonanywhere.com/projects";
-        // const url = "http://127.0.0.1:5000/projects";
+        // const url = "https://0x902.pythonanywhere.com/projects";
+        const url = "http://127.0.0.1:5000/projects";
 
         const response = await fetch(url);
 
@@ -51,9 +54,20 @@ function Projects() {
         <div className="projects-container block" id="projects">
             <h2>Projects ({projects.length})</h2>
             {loading ? (
-                <p id="loading-projects">Loading projects...</p>
+                <div className="projects-loading-container">
+                    <l-metronome
+                        size="40"
+                        speed="1.6"
+                        color="#f3582c"
+                    ></l-metronome>
+                    loading projects...
+                </div>
             ) : projectsFetchError ? (
-                <p id="loading-projects">{projectsFetchError}</p>
+                <p id="loading-projects">
+                    {projectsFetchError}
+                    <br />
+                    <button onClick={fetchWithRetry}>Retry</button>
+                </p>
             ) : (
                 projects.map((project) => (
                     <ProjectCard key={project.id} project={project} />

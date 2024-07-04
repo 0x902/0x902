@@ -1,22 +1,19 @@
 .thought-container {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
 }
 
 .thought-container .thought-title {
-    font-weight: 600;
-}
-
-.thought-container .date {
-    font-style: italic;
+    font-family: "IckyTicket";
 }
 
 .thought-container pre {
-    font-size: 16px;
-    background-color: #f4f4f4; /* light gray background */
-    color: #333; /* dark gray text color */
-    padding: 20px; /* space inside the element */
+    font-family: inherit;
+    font-size: 18px;
+    background-color: #ffffff; /* light gray background */
+    color: #000000; /* dark gray text color */
+    padding: 25px; /* space inside the element */
     border: 1px solid #dadada; /* light gray border */
     overflow: auto; /* scrollable overflow */
     white-space: pre-wrap; /* wrap text */
@@ -25,10 +22,20 @@
 
 #loading-thought {
     font-weight: 500;
-    font-size: 18px;
+    font-size: 20px;
     text-align: center;
     padding: 15px;
-    background-color: #dadada;
+    background-color: whitesmoke;
     border-radius: 10px;
     width: max-content;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.tags {
+    font-size: 16px;
 }
