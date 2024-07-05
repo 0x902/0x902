@@ -1,17 +1,24 @@
 .fab-hire {
     position: fixed;
-    right: 20px;
-    bottom: 20px;
+    right: 25px;
+    bottom: 25px;
     width: 70px;
     height: 70px;
-    border-radius: 20px;
+    border-radius: 100px;
     border: none;
     padding: 15px;
 
-    box-shadow: 1px 1px 8px rgba(000, 000, 000, 0.2);
+    box-shadow: 1px 1px 5px rgba(000, 000, 000, 0.2);
     background-color: whitesmoke;
     cursor: pointer;
     z-index: 100;
+
+    transition: all 0.5s ease;
+}
+
+.fab-hire:hover {
+    transform: translateY(-5px);
+    box-shadow: 1px 5px 7px rgba(000, 000, 000, 0.2);
 }
 
 .fab-hire img {

@@ -1,14 +1,10 @@
 import React from "react";
-import icon from "./icon.png";
+import icon from "./icon.svg";
 import "./FloatingHireButton.css";
 
 const FloatingHireButton = () => {
     return (
-        <a
-            title="freelancer profile"
-            href="https://www.freelancer.com/u/danielwhite360"
-            target="blank"
-        >
+        <a href="https://www.freelancer.com/u/danielwhite360" target="blank">
             <button className="fab-hire">
                 <img src={icon} alt="freelamcer icon" />
             </button>

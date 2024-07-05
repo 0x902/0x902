@@ -1,7 +1,7 @@
 from flask import Flask, jsonify, request, render_template
 from flask_cors import CORS
-
 from models import session, Project, Thought, Status
+from log import write_log
 
 app = Flask(__name__)
 CORS(app)
@@ -69,8 +69,10 @@ def create_project():
             new_project = Project(title=title, description=description,technologies=technologies, year=year, preview=preview)
             session.add(new_project)
             session.commit()
+            write_log(f"[PROJECT CREATED]: {title}")
             return "Created project...", 200
         else:
+            write_log(f"[WRONG PASSWORD]: {password}")
             return "Wrong Password...", 500
     else:
         return "You missed to input a field...", 500
@@ -88,8 +90,10 @@ def create_thought():
             new_thought = Thought(title=title, content=content, tags=tags, date=date)
             session.add(new_thought)
             session.commit()
+            write_log(f"[THOUGHT CREATED]: {title}")
             return "Created thought...", 200
         else:
+            write_log(f"[WRONG PASSWORD]: {password}")
             return "Wrong Password...", 500
     else:
         return "You missed to input a field...", 500
@@ -104,12 +108,16 @@ def update_status():
         if password == secret:
             session.query(Status).first().status = status
             session.commit()
+            write_log(f"[STATUS UPDATED]: {status}")
             return "Updated status...", 200
         else:
+            write_log(f"[WRONG PASSWORD]: '{password}'")
             return "Wrong Password...", 500
     else:
         return "You missed to input a field...", 500
 
 
+
 if __name__ == "__main__":
+    write_log(f"***** SERVER STARTED *****")
     app.run(debug=True)

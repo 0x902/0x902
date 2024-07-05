@@ -4,6 +4,7 @@ import NotFound from "./NotFound";
 import Header from "../components/Header/Header";
 import "./css/ThoughtPage.css";
 import Footer from "../components/Footer/Footer";
+import FloatingHireButton from "../components/FloatingHireButton/FloatingHireButton";
 
 import { metronome } from "ldrs";
 metronome.register();
@@ -64,6 +65,7 @@ export default function ThoughtPage() {
                 <p className="tags">Tags: {tags.toLowerCase()}</p>
             </div>
             <Footer />
+            <FloatingHireButton />
         </div>
     );
 }
