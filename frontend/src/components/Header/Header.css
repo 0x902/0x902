@@ -22,7 +22,16 @@ header a {
 }
 
 @media only screen and (max-width: 600px) {
+    .header-logo {
+        display: none;
+    }
+
     header ul {
         gap: 20px;
+        justify-content: center;
+    }
+
+    header ul li::after {
+        content: ".";
     }
 }

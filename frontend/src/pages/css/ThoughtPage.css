@@ -39,3 +39,17 @@
 .tags {
     font-size: 16px;
 }
+
+@media only screen and (max-width: 600px) {
+    .tags,
+    .thought-container .thought-title,
+    .thought-container .date {
+        text-align: center;
+    }
+
+    .thought-container .date {
+        background-color: white;
+        border: 1px solid #dadada; /* light gray border */
+        padding: 5px;
+    }
+}

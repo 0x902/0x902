@@ -1,7 +1,7 @@
 .fab-hire {
     position: fixed;
-    right: 25px;
-    bottom: 25px;
+    right: 35px;
+    bottom: 35px;
     width: 70px;
     height: 70px;
     border-radius: 100px;
@@ -24,4 +24,14 @@
 .fab-hire img {
     width: 100%;
     pointer-events: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .fab-hire {
+        right: 20px;
+        bottom: 20px;
+        width: 55px;
+        height: 55px;
+        padding: 12px;
+    }
 }
