@@ -119,5 +119,5 @@ def update_status():
 
 
 if __name__ == "__main__":
-    write_log(f"***** SERVER STARTED *****")
+    write_log("***** SERVER STARTED *****")
     app.run(debug=True)
