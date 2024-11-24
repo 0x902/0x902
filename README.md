@@ -1,6 +1,6 @@
 # 👽 Yasir Ahmed aka 0x902
 
-**`UI/UX DESIGNER & FRONTEND DEVELOPER`**
+**`UI/UX DESIGNER & WEB DEVELOPER`**
 
 ---
 
